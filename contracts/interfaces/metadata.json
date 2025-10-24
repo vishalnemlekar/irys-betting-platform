@@ -1,0 +1,1440 @@
+{
+  "chains": [
+    {
+      "network": "devnet",
+      "chainId": "20258",
+      "rpc_url": "https://dev-rpc.codenut.dev",
+      "contracts": [
+        {
+          "address": "0xadea946285ae8c49d5d9696b559d5f615a99d8d7",
+          "txHash": "0xc068ce83c6cbc1fd90774cc293ee80d4a74f6a5f7b3e1a24c57c69664329a5fc",
+          "contractName": "BettingPlatform",
+          "abi": [
+            {
+              "inputs": [],
+              "stateMutability": "nonpayable",
+              "type": "constructor"
+            },
+            {
+              "inputs": [],
+              "name": "BPS_DENOMINATOR",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "PLATFORM_FEE_BPS",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "accumulatedFees",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "name": "betPlatformFees",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "name": "betTotalPools",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "name": "bets",
+              "outputs": [
+                {
+                  "internalType": "address",
+                  "name": "creator",
+                  "type": "address"
+                },
+                {
+                  "internalType": "string",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "description",
+                  "type": "string"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "investmentDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "settlementDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "string",
+                  "name": "irysTxId",
+                  "type": "string"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "settled",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "winningOutcomeIndex",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "exists",
+                  "type": "bool"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "outcomeIndex",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "investor",
+                  "type": "address"
+                }
+              ],
+              "name": "calculatePotentialReward",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "potentialReward",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                }
+              ],
+              "name": "claimRewards",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "string",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "description",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string[]",
+                  "name": "outcomes",
+                  "type": "string[]"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "investmentDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "settlementDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "string",
+                  "name": "irysTxId",
+                  "type": "string"
+                }
+              ],
+              "name": "createBet",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                }
+              ],
+              "name": "getBet",
+              "outputs": [
+                {
+                  "internalType": "address",
+                  "name": "creator",
+                  "type": "address"
+                },
+                {
+                  "internalType": "string",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "description",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string[]",
+                  "name": "outcomes",
+                  "type": "string[]"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "investmentDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "settlementDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "string",
+                  "name": "irysTxId",
+                  "type": "string"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "settled",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "winningOutcomeIndex",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "outcomeIndex",
+                  "type": "uint256"
+                }
+              ],
+              "name": "getOutcomeInvestors",
+              "outputs": [
+                {
+                  "internalType": "address[]",
+                  "name": "investors",
+                  "type": "address[]"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "outcomeIndex",
+                  "type": "uint256"
+                }
+              ],
+              "name": "getOutcomePool",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "totalAmount",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "outcomeIndex",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "investor",
+                  "type": "address"
+                }
+              ],
+              "name": "getUserInvestment",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "",
+                  "type": "address"
+                }
+              ],
+              "name": "hasClaimed",
+              "outputs": [
+                {
+                  "internalType": "bool",
+                  "name": "",
+                  "type": "bool"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "outcomeIndex",
+                  "type": "uint256"
+                }
+              ],
+              "name": "invest",
+              "outputs": [],
+              "stateMutability": "payable",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "nextBetId",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "name": "outcomePools",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "totalAmount",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "owner",
+              "outputs": [
+                {
+                  "internalType": "address",
+                  "name": "",
+                  "type": "address"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "renounceOwnership",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "winningOutcomeIndex",
+                  "type": "uint256"
+                }
+              ],
+              "name": "settleBet",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "newOwner",
+                  "type": "address"
+                }
+              ],
+              "name": "transferOwnership",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "withdrawFees",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": true,
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": true,
+                  "internalType": "address",
+                  "name": "creator",
+                  "type": "address"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "string",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "string[]",
+                  "name": "outcomes",
+                  "type": "string[]"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "investmentDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "settlementDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "string",
+                  "name": "irysTxId",
+                  "type": "string"
+                }
+              ],
+              "name": "BetCreated",
+              "type": "event"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": true,
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "winningOutcomeIndex",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "totalPool",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "platformFee",
+                  "type": "uint256"
+                }
+              ],
+              "name": "BetSettled",
+              "type": "event"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": true,
+                  "internalType": "address",
+                  "name": "owner",
+                  "type": "address"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                }
+              ],
+              "name": "FeesWithdrawn",
+              "type": "event"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": true,
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": true,
+                  "internalType": "address",
+                  "name": "investor",
+                  "type": "address"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "outcomeIndex",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                }
+              ],
+              "name": "InvestmentMade",
+              "type": "event"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": true,
+                  "internalType": "address",
+                  "name": "previousOwner",
+                  "type": "address"
+                },
+                {
+                  "indexed": true,
+                  "internalType": "address",
+                  "name": "newOwner",
+                  "type": "address"
+                }
+              ],
+              "name": "OwnershipTransferred",
+              "type": "event"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": true,
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": true,
+                  "internalType": "address",
+                  "name": "investor",
+                  "type": "address"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                }
+              ],
+              "name": "RewardsClaimed",
+              "type": "event"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "owner",
+                  "type": "address"
+                }
+              ],
+              "name": "OwnableInvalidOwner",
+              "type": "error"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "account",
+                  "type": "address"
+                }
+              ],
+              "name": "OwnableUnauthorizedAccount",
+              "type": "error"
+            },
+            {
+              "inputs": [],
+              "name": "ReentrancyGuardReentrantCall",
+              "type": "error"
+            }
+          ],
+          "bytecode": "",
+          "streamed": true
+        }
+      ],
+      "security_score": 74,
+      "security_scan_timestamp": 1761283302
+    },
+    {
+      "network": "irys_testnet",
+      "chainId": "1270",
+      "rpc_url": "https://testnet-rpc.irys.xyz/v1/execution-rpc",
+      "contracts": [
+        {
+          "address": "0x13cDf5F623a13Cd89E6fa8099C14D5251793ebA3",
+          "txHash": "0xea6a4b70ed0ca2b6ab961ea0aaa07b12f946dc14641827a52eca3a98a98a4ccd",
+          "contractName": "BettingPlatform",
+          "abi": [
+            {
+              "inputs": [],
+              "stateMutability": "nonpayable",
+              "type": "constructor"
+            },
+            {
+              "inputs": [],
+              "name": "BPS_DENOMINATOR",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "PLATFORM_FEE_BPS",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "accumulatedFees",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "name": "betPlatformFees",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "name": "betTotalPools",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "name": "bets",
+              "outputs": [
+                {
+                  "internalType": "address",
+                  "name": "creator",
+                  "type": "address"
+                },
+                {
+                  "internalType": "string",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "description",
+                  "type": "string"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "investmentDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "settlementDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "string",
+                  "name": "irysTxId",
+                  "type": "string"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "settled",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "winningOutcomeIndex",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "exists",
+                  "type": "bool"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "outcomeIndex",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "investor",
+                  "type": "address"
+                }
+              ],
+              "name": "calculatePotentialReward",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "potentialReward",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                }
+              ],
+              "name": "claimRewards",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "string",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "description",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string[]",
+                  "name": "outcomes",
+                  "type": "string[]"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "investmentDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "settlementDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "string",
+                  "name": "irysTxId",
+                  "type": "string"
+                }
+              ],
+              "name": "createBet",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                }
+              ],
+              "name": "getBet",
+              "outputs": [
+                {
+                  "internalType": "address",
+                  "name": "creator",
+                  "type": "address"
+                },
+                {
+                  "internalType": "string",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "description",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string[]",
+                  "name": "outcomes",
+                  "type": "string[]"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "investmentDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "settlementDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "string",
+                  "name": "irysTxId",
+                  "type": "string"
+                },
+                {
+                  "internalType": "bool",
+                  "name": "settled",
+                  "type": "bool"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "winningOutcomeIndex",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "outcomeIndex",
+                  "type": "uint256"
+                }
+              ],
+              "name": "getOutcomeInvestors",
+              "outputs": [
+                {
+                  "internalType": "address[]",
+                  "name": "investors",
+                  "type": "address[]"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "outcomeIndex",
+                  "type": "uint256"
+                }
+              ],
+              "name": "getOutcomePool",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "totalAmount",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "outcomeIndex",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "investor",
+                  "type": "address"
+                }
+              ],
+              "name": "getUserInvestment",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "address",
+                  "name": "",
+                  "type": "address"
+                }
+              ],
+              "name": "hasClaimed",
+              "outputs": [
+                {
+                  "internalType": "bool",
+                  "name": "",
+                  "type": "bool"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "outcomeIndex",
+                  "type": "uint256"
+                }
+              ],
+              "name": "invest",
+              "outputs": [],
+              "stateMutability": "payable",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "nextBetId",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "",
+                  "type": "uint256"
+                }
+              ],
+              "name": "outcomePools",
+              "outputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "totalAmount",
+                  "type": "uint256"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "owner",
+              "outputs": [
+                {
+                  "internalType": "address",
+                  "name": "",
+                  "type": "address"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "renounceOwnership",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "winningOutcomeIndex",
+                  "type": "uint256"
+                }
+              ],
+              "name": "settleBet",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "newOwner",
+                  "type": "address"
+                }
+              ],
+              "name": "transferOwnership",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "withdrawFees",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": true,
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": true,
+                  "internalType": "address",
+                  "name": "creator",
+                  "type": "address"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "string",
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "string[]",
+                  "name": "outcomes",
+                  "type": "string[]"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "investmentDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "settlementDeadline",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "string",
+                  "name": "irysTxId",
+                  "type": "string"
+                }
+              ],
+              "name": "BetCreated",
+              "type": "event"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": true,
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "winningOutcomeIndex",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "totalPool",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "platformFee",
+                  "type": "uint256"
+                }
+              ],
+              "name": "BetSettled",
+              "type": "event"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": true,
+                  "internalType": "address",
+                  "name": "owner",
+                  "type": "address"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                }
+              ],
+              "name": "FeesWithdrawn",
+              "type": "event"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": true,
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": true,
+                  "internalType": "address",
+                  "name": "investor",
+                  "type": "address"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "outcomeIndex",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                }
+              ],
+              "name": "InvestmentMade",
+              "type": "event"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": true,
+                  "internalType": "address",
+                  "name": "previousOwner",
+                  "type": "address"
+                },
+                {
+                  "indexed": true,
+                  "internalType": "address",
+                  "name": "newOwner",
+                  "type": "address"
+                }
+              ],
+              "name": "OwnershipTransferred",
+              "type": "event"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": true,
+                  "internalType": "uint256",
+                  "name": "betId",
+                  "type": "uint256"
+                },
+                {
+                  "indexed": true,
+                  "internalType": "address",
+                  "name": "investor",
+                  "type": "address"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                }
+              ],
+              "name": "RewardsClaimed",
+              "type": "event"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "owner",
+                  "type": "address"
+                }
+              ],
+              "name": "OwnableInvalidOwner",
+              "type": "error"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "account",
+                  "type": "address"
+                }
+              ],
+              "name": "OwnableUnauthorizedAccount",
+              "type": "error"
+            },
+            {
+              "inputs": [],
+              "name": "ReentrancyGuardReentrantCall",
+              "type": "error"
+            }
+          ],
+          "bytecode": "",
+          "streamed": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,10 +1,9 @@
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig } from 'vite';
-import componentTagger from './plugins/component-tagger';
 
 export default defineConfig({
-  plugins: [react(), componentTagger()],
+  plugins: [react()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

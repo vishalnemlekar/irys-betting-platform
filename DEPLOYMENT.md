@@ -40,7 +40,7 @@ git push -u origin main
    - Click "Environment Variables"
    - Add the following:
      ```
-     VITE_CHAIN=devnet
+     VITE_CHAIN=irys_testnet
      VITE_WALLETCONNECT_PROJECT_ID=21fef48091f12692cad574a6f7753643
      ```
    - Note: Get your own WalletConnect Project ID from https://cloud.walletconnect.com for production
